@@ -34,4 +34,4 @@ def start_dashboard():
 
 
 if __name__ == '__main__':
-    app.run(port = "1208")
+    app.run()
