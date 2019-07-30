@@ -75,7 +75,7 @@ class BaseExtensionApp(JupyterApp):
 def _get_config_dir(user=False, sys_prefix=False):
     """Get the location of config files for the current context
 
-    Returns the string to the environment
+    Returns the string to the enviornment
 
     Parameters
     ----------

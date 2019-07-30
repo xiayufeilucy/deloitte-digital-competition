@@ -178,7 +178,7 @@ define([
             cell: this, 
             notebook: this.notebook});
         inner_cell.append(this.celltoolbar.element);
-        var input_area = $('<div/>').addClass('input_area').attr("aria-label", i18n.msg._("Edit code here"));
+        var input_area = $('<div/>').addClass('input_area');
         this.code_mirror = new CodeMirror(input_area.get(0), this._options.cm_config);
         // In case of bugs that put the keyboard manager into an inconsistent state,
         // ensure KM is enabled when CodeMirror is focused:
@@ -609,7 +609,7 @@ define([
         return cont;
     };
 
-    // Backwards compatibility.
+    // Backwards compatability.
     IPython.CodeCell = CodeCell;
 
     return {'CodeCell': CodeCell};

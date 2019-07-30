@@ -58,9 +58,7 @@ define([
             ],
             'run_int'],
          ['<add_celltype_list>'],
-         [
-           ['jupyter-notebook:show-command-palette'],
-           'cmd_palette']
+         [['jupyter-notebook:show-command-palette']]
         ];
         this.construct(grps);
     };
@@ -75,8 +73,6 @@ define([
         var multiselect = $('<option/>').attr('value','multiselect').attr('disabled','').text('-');
         var sel = $('<select/>')
             .attr('id','cell_type')
-            .attr('aria-label', i18n.msg._('combobox, select cell type'))
-            .attr('role', 'combobox')
             .addClass('form-control select-xs')
             .append($('<option/>').attr('value','code').text(i18n.msg._('Code')))
             .append($('<option/>').attr('value','markdown').text(i18n.msg._('Markdown')))

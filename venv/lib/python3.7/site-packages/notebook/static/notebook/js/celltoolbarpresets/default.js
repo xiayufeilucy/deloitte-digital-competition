@@ -10,7 +10,7 @@ define([
 
     var CellToolbar = celltoolbar.CellToolbar;
 
-    var raw_edit = function (cell , edit_metadata_button) {
+    var raw_edit = function (cell) {
         dialog.edit_metadata({
             md: cell.metadata,
             callback: function (md) {
@@ -18,8 +18,7 @@ define([
             },
             name: i18n.msg._('Cell'),
             notebook: this.notebook,
-            keyboard_manager: this.keyboard_manager,
-            edit_metadata_button: edit_metadata_button
+            keyboard_manager: this.keyboard_manager
         });
     };
 
@@ -29,10 +28,9 @@ define([
             .addClass("btn btn-default btn-xs")
             .text(i18n.msg._("Edit Metadata"))
             .click( function () {
-                raw_edit(cell, this);
+                raw_edit(cell);
                 return false;
             });
-
         button_container.append(button);
     };
 

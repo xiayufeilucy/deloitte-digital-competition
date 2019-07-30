@@ -467,14 +467,14 @@ define([
     };
 
     /**
-     * should be overwritten by subclass
+     * should be overritten by subclass
      * @method get_text
      */
     Cell.prototype.get_text = function () {
     };
 
     /**
-     * should be overwritten by subclass
+     * should be overritten by subclass
      * @method set_text
      * @param {string} text
      */
@@ -482,7 +482,7 @@ define([
     };
 
     /**
-     * should be overwritten by subclass
+     * should be overritten by subclass
      * serialise cell to json.
      * @method toJSON
      **/
@@ -504,7 +504,7 @@ define([
     };
 
     /**
-     * should be overwritten by subclass
+     * should be overritten by subclass
      * @method fromJSON
      **/
     Cell.prototype.fromJSON = function (data) {

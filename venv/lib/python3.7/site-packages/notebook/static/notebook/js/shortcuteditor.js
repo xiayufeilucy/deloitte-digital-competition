@@ -12,6 +12,9 @@ define([
     dialog,
     marked
 ) {
+    var render = preact.render;
+    var createClass = preactCompat.createClass;
+    var createElement = preactCompat.createElement;
 
 
 /**
@@ -30,7 +33,7 @@ var humanize_action_id = function(str) {
  * Wether an action have a keybinding or not.
  **/
 
-var KeyBinding = createReactClass({
+var KeyBinding = createClass({
   displayName: 'KeyBindings',
   getInitialState: function() {
     return {shrt:''};
@@ -50,13 +53,13 @@ var KeyBinding = createReactClass({
       event.preventDefault();
       return false;
     };
-    return React.createElement('form', {className:'jupyter-keybindings',
+    return createElement('form', {className:'jupyter-keybindings',
             onSubmit: binding_setter
         },
-              React.createElement('i', {className: "pull-right fa fa-plus", alt: 'add-keyboard-shortcut',
+              createElement('i', {className: "pull-right fa fa-plus", alt: 'add-keyboard-shortcut',
                   onClick: binding_setter
               }),
-              React.createElement('input', {
+              createElement('input', {
                                       type:'text', 
                                placeholder:'add shortcut', 
                                  className:'pull-right'+((available||empty)?'':' alert alert-danger'),
@@ -64,10 +67,10 @@ var KeyBinding = createReactClass({
                                   onChange:that.handleShrtChange
               }),
               that.props.shortcuts ? that.props.shortcuts.map(function (item, index) {
-                return React.createElement('span', {className: 'pull-right'},
-                  React.createElement('kbd', {}, [
+                return createElement('span', {className: 'pull-right'},
+                  createElement('kbd', {}, [
                     item.h,
-                    React.createElement('i', {className: "fa fa-times", alt: 'remove '+item.h,
+                    createElement('i', {className: "fa fa-times", alt: 'remove '+item.h,
                       onClick:function () {
                         that.props.unbind(item.raw);
                       }
@@ -75,13 +78,13 @@ var KeyBinding = createReactClass({
                   ])
                 );
               }): null,
-              React.createElement('div', {title: '(' + that.props.ckey + ')' ,
+              createElement('div', {title: '(' + that.props.ckey + ')' ,
                 className:'jupyter-keybindings-text'}, that.props.display )
       );
   }
 });
 
-var KeyBindingList = createReactClass({
+var KeyBindingList = createClass({
   displayName: 'KeyBindingList',
   getInitialState: function(){
     return {data:[]};
@@ -92,7 +95,7 @@ var KeyBindingList = createReactClass({
   render: function() {
       var that = this;
       var children = this.state.data.map(function (binding) {
-          return React.createElement(KeyBinding, Object.assign({}, binding, {
+          return createElement(KeyBinding, Object.assign({}, binding, {
           onAddBindings: function (shortcut, action) {
               that.props.bind(shortcut, action);
               that.setState({data:that.props.callback()});
@@ -104,7 +107,7 @@ var KeyBindingList = createReactClass({
              }
           }));
       });
-      children.unshift(React.createElement('div', {className:'well', key:'disclamer', id:'short-key-binding-intro', dangerouslySetInnerHTML:
+      children.unshift(createElement('div', {className:'well', key:'disclamer', id:'short-key-binding-intro', dangerouslySetInnerHTML:
             {__html: 
             marked(
 
@@ -113,13 +116,13 @@ var KeyBindingList = createReactClass({
             "See more [**details of defining keyboard shortcuts**](#long-key-binding-intro) below."
             )}
       }));
-      children.push(React.createElement('div', {className:'well', key:'disclamer', id:'long-key-binding-intro', dangerouslySetInnerHTML:
+      children.push(createElement('div', {className:'well', key:'disclamer', id:'long-key-binding-intro', dangerouslySetInnerHTML:
             {__html: 
             marked(
 
             "This dialog allows you to modify the keyboard shortcuts available in command mode. "+ 
             "Any changes will be persisted between sessions and across environments. "+
-            "You can define two kinds of shortcuts: **key combinations** and **key sequences**.\n"+
+            "You can define two kinds of shorctuts: **key combinations** and **key sequences**.\n"+
             "\n"+
             " - **Key Combinations**:\n"+
             "   - Use hyphens `-` to represent keys that should be pressed at the same time.\n"+
@@ -162,7 +165,7 @@ var KeyBindingList = createReactClass({
             "Changing the keybindings of edit mode is not currently available."
             )}
       }));
-      return React.createElement('div',{}, children);
+      return createElement('div',{}, children);
     }
 });
 
@@ -214,8 +217,8 @@ var ShortcutEditor = function(notebook) {
     mod.addClass("modal_stretch");
 
     mod.modal('show');
-    ReactDOM.render(
-        React.createElement(KeyBindingList, {
+    render(
+        createElement(KeyBindingList, {
             callback: function () { return  get_shortcuts_data(notebook);},
             bind: function (shortcut, command) {
                 return notebook.keyboard_manager.command_shortcuts._persist_shortcut(shortcut, command);
