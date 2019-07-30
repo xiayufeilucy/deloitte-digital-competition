@@ -1,7 +1,6 @@
 from flask import Flask, render_template, request, session, jsonify, send_file, Response, flash
 from flask_bootstrap import Bootstrap
 from wtforms import FloatField, SubmitField, StringField, PasswordField, BooleanField
-from wtforms.validators import DataRequired, Email, Length, EqualTo, ValidationError
 from flask_wtf import Form, FlaskForm
 
 app = Flask(__name__)
