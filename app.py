@@ -12,7 +12,7 @@ class Search(FlaskForm):
     name = StringField('search', validators=[DataRequired()])
 
 
-@app.route('/',methods= ["GET", "POST"])
+@app.route('/h',methods= ["GET", "POST"])
 def search():
     form = Search(request.form)
     search = ""
@@ -30,6 +30,10 @@ def search():
 @app.route('/summary')
 def start_dashboard():
     return render_template('dashboard- summary.html')
+
+@app.route('/')
+def trial():
+    return render_template('index2.html')
 
 
 if __name__ == '__main__':
