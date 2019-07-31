@@ -9,7 +9,7 @@ Bootstrap(app)
 
 #Search Form
 class Search(FlaskForm):
-    name = StringField('search', validators=[DataRequired()])
+    name = StringField('search')
 
 
 @app.route('/h',methods= ["GET", "POST"])
