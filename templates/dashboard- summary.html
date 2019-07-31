@@ -618,13 +618,13 @@
                 </div>
             </div>
             <!-- End Summary Bar -->
-             <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
             <script>
-                 var ctx = document.getElementById("piechart");
+                var ctx = document.getElementById("piechart");
                 var barchart1 = new Chart(ctx, {
                     type: 'doughnut',
                     data: {
-                        labels: ["Technical Personnel", "Managerial Personnel", "Human Resource", "Business Analyst", "Research Personnel","Marketing Personnel", "Financial Personnel", "Others"],
+                        labels: ["Technical Personnel", "Managerial Personnel", "Human Resource", "Business Analyst", "Research Personnel", "Marketing Personnel", "Financial Personnel", "Others"],
                         datasets: [{
                             label: 'Number of Employees',
                             data: [0.36, 0.21, 0.07, 0.20, 0.13, 0.02, 0.01, 0],
@@ -651,8 +651,7 @@
                             borderWidth: 1
                         }]
                     },
-                    options: {
-                    }
+                    options: {}
                 });
 
             </script>
@@ -921,64 +920,64 @@
             </script>
             <!-- End Connection Histogram -->
 
-                            <!-- Start Connection Histogram -->
-                <!-- Start Histogram -->
-                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                    <div class="ongoing-task-inner notika-shadow mg-t-30">
-                        <div class="email-rdn-hd">
-                            <h3>Education degree</h3>
-                        </div>
-                        <div class="bar-chart-wp">
-                            <canvas height="140vh" width="180vw" id="barchart3"></canvas>
-                        </div>
+            <!-- Start Connection Histogram -->
+            <!-- Start Histogram -->
+            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                <div class="ongoing-task-inner notika-shadow mg-t-30">
+                    <div class="email-rdn-hd">
+                        <h3>Education degree</h3>
+                    </div>
+                    <div class="bar-chart-wp">
+                        <canvas height="140vh" width="180vw" id="barchart3"></canvas>
                     </div>
                 </div>
+            </div>
 
-                <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
-                <script>
-                    var ctx = document.getElementById("barchart3");
-                    var barchart1 = new Chart(ctx, {
-                        type: 'bar',
-                        data: {
-                            labels: ["Associates or below", "Bachelor's", "Master's", "phD"],
-                            datasets: [{
-                                label: 'Bar Chart',
-                                data: [0.06, 0.7, 0.2, 0.04],
-                                backgroundColor: [
-                                    'rgba(255, 99, 132, 0.2)',
-                                    'rgb(50,205,50, 0.2)',
-                                    'rgba(255, 206, 86, 0.2)',
-                                    'rgba(75, 192, 192, 0.2)'
-                                ],
-                                borderColor: [
-                                    'rgba(255,99,132,1)',
-                                    'rgba(54, 162, 235, 1)',
-                                    'rgba(255, 206, 86, 1)',
-                                    'rgba(75, 192, 192, 1)'
-                                ],
-                                borderWidth: 1
-                            }]
-                        },
-                        options: {
-                            scales: {
-                                yAxes: [{
-                                    ticks: {
-                                        min: 0,
-                                        max: this.max,// Your absolute max value
-                                        callback: function (value) {
-                                            return (value / this.max * 100).toFixed(0) + '%'; // convert it to percentage
-                                        },
+            <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+            <script>
+                var ctx = document.getElementById("barchart3");
+                var barchart1 = new Chart(ctx, {
+                    type: 'bar',
+                    data: {
+                        labels: ["Associates or below", "Bachelor's", "Master's", "phD"],
+                        datasets: [{
+                            label: 'Bar Chart',
+                            data: [0.06, 0.7, 0.2, 0.04],
+                            backgroundColor: [
+                                'rgba(255, 99, 132, 0.2)',
+                                'rgb(50,205,50, 0.2)',
+                                'rgba(255, 206, 86, 0.2)',
+                                'rgba(75, 192, 192, 0.2)'
+                            ],
+                            borderColor: [
+                                'rgba(255,99,132,1)',
+                                'rgba(54, 162, 235, 1)',
+                                'rgba(255, 206, 86, 1)',
+                                'rgba(75, 192, 192, 1)'
+                            ],
+                            borderWidth: 1
+                        }]
+                    },
+                    options: {
+                        scales: {
+                            yAxes: [{
+                                ticks: {
+                                    min: 0,
+                                    max: this.max,// Your absolute max value
+                                    callback: function (value) {
+                                        return (value / this.max * 100).toFixed(0) + '%'; // convert it to percentage
                                     },
-                                    scaleLabel: {
-                                        display: true,
-                                        labelString: 'Percentage',
-                                    }
-                                }]
-                            }
+                                },
+                                scaleLabel: {
+                                    display: true,
+                                    labelString: 'Percentage',
+                                }
+                            }]
                         }
-                    });
-                </script>
-                <!-- End Connection Histogram -->
+                    }
+                });
+            </script>
+            <!-- End Connection Histogram -->
 
         </div>
     </div>
@@ -1075,80 +1074,81 @@
                 </div>
                 <!-- End Origin Count -->
 
-                 <!-- Start Employee Profile-->
-            <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
-                <div class="recent-signup-inner notika-shadow mg-t-30">
-                    <div class="realtime-ctn">
-                        <div class="realtime-title widget-inner-wp signup-hd-wd">
-                            <h2>Employee LinkedIn profile</h2>
-                            <p>(Not Exhaustive)</p>
+                <!-- Start Employee Profile-->
+                <div class="col-lg-4 col-md-6 col-sm-6 col-xs-12">
+                    <div class="recent-signup-inner notika-shadow mg-t-30">
+                        <div class="realtime-ctn">
+                            <div class="realtime-title widget-inner-wp signup-hd-wd">
+                                <h2>Employee LinkedIn profile</h2>
+                                <p>(Not Exhaustive)</p>
+                            </div>
+                        </div>
+                        <div class="widget-signup-list">
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Zoe Baumgarten"
+                               href="https://www.linkedin.com/in/zoebaumgarten/">Z</a>
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Tejas Ganga"
+                               href="https://www.linkedin.com/in/tejasganga/">T</a>
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Binpeng Zhang"
+                               href="https://www.linkedin.com/in/binpeng-zhang-7828a3b8/">B</a>
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top"
+                               title="Tiffany E. Collins"
+                               href="https://www.linkedin.com/in/tiffanyecollins/">T</a>
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Kenneth Henson"
+                               href="https://www.linkedin.com/in/kenneth-henson-b6417b20/">K</a>
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Madison Kunstman"
+                               href="https://www.linkedin.com/in/madisonkunstman/">M</a>
+                            <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Bill Wade"
+                               href="https://www.linkedin.com/in/bill-wade-6237896/">B</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Scott Lambert"
+                               href="https://www.linkedin.com/in/scott-lambert-6978021b/">S</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Eli Hammerman"
+                               href="https://www.linkedin.com/in/eli-hammerman-96ab9626/">E</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Nicholas Joslin"
+                               href="https://www.linkedin.com/in/nicholasjoslin/">N</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Scott Cragg"
+                               href="https://www.linkedin.com/in/scott-cragg-74004a1a/">S</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Rick Barnard"
+                               href="https://www.linkedin.com/in/rick-barnard-8a57132/">R</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Seth Pennington"
+                               href="https://www.linkedin.com/in/seth-pennington-a1178813/">S</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Philip Agee"
+                               href="https://www.linkedin.com/in/philip-agee-47ab213/">P</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Ravi Mudumby"
+                               href="https://www.linkedin.com/in/ravi-mudumby-337b96b/">R</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Jenny Rice"
+                               href="https://www.linkedin.com/in/jenny-rice-7b43a35/">J</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Jeff Cowgill"
+                               href="https://www.linkedin.com/in/jeff-cowgill/">J</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Jason Wiedemann"
+                               href="https://www.linkedin.com/in/jwiedemann12/">J</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Amy Ciccarone"
+                               href="https://www.linkedin.com/in/amy-ciccarone-97861b13/">A</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Han Oh"
+                               href="https://www.linkedin.com/in/han-oh-85a349169/">H</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Charles Slyker"
+                               href="https://www.linkedin.com/in/charles-slyker-2a328920/">C</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Austin Wilson"
+                               href="https://www.linkedin.com/in/auswilson/">A</a>
+                            <a data-toggle="tooltip" data-placement="top" title="Ryan McCarty"
+                               href="https://www.linkedin.com/in/ryan-mccarty-b464b37a/">R</a>
+                            <a data-toggle="tooltip" data-placement="top" title="John Deeley"
+                               href="https://www.linkedin.com/in/john-deeley-3239a814/">J</a>
+                            <a data-toggle="tooltip" data-placement="top" title="David Coomes"
+                               href="https://www.linkedin.com/in/david-coomes-22318032/?locale=de_DE">D</a>
+                            <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Rich McKinless"
+                               href="https://www.linkedin.com/in/rich-mckinless-36174010/">H</a>
+                            <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Stephen Exley"
+                               href="https://www.linkedin.com/in/stephenexley/">S</a>
+                            <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="John Knost"
+                               href="https://www.linkedin.com/in/johnknost/">J</a>
+                            <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Paul Matteucci"
+                               href="https://www.linkedin.com/in/paul-matteucci-7025348/">P</a>
+                            <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Beth Leonard PMP"
+                               href="https://www.linkedin.com/in/beth-leonard/">B</a>
                         </div>
                     </div>
-                    <div class="widget-signup-list">
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Zoe Baumgarten"
-                           href="https://www.linkedin.com/in/zoebaumgarten/">Z</a>
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Tejas Ganga"
-                           href="https://www.linkedin.com/in/tejasganga/">T</a>
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Binpeng Zhang"
-                           href="https://www.linkedin.com/in/binpeng-zhang-7828a3b8/">B</a>
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Tiffany E. Collins"
-                           href="https://www.linkedin.com/in/tiffanyecollins/">T</a>
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Kenneth Henson"
-                           href="https://www.linkedin.com/in/kenneth-henson-b6417b20/">K</a>
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Madison Kunstman"
-                           href="https://www.linkedin.com/in/madisonkunstman/">M</a>
-                        <a class="signup-wd-mn" data-toggle="tooltip" data-placement="top" title="Bill Wade"
-                           href="https://www.linkedin.com/in/bill-wade-6237896/">B</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Scott Lambert"
-                           href="https://www.linkedin.com/in/scott-lambert-6978021b/">S</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Eli Hammerman"
-                           href="https://www.linkedin.com/in/eli-hammerman-96ab9626/">E</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Nicholas Joslin"
-                           href="https://www.linkedin.com/in/nicholasjoslin/">N</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Scott Cragg"
-                           href="https://www.linkedin.com/in/scott-cragg-74004a1a/">S</a>
-                       <a data-toggle="tooltip" data-placement="top" title="Rick Barnard"
-                          href="https://www.linkedin.com/in/rick-barnard-8a57132/">R</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Seth Pennington"
-                           href="https://www.linkedin.com/in/seth-pennington-a1178813/">S</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Philip Agee"
-                           href="https://www.linkedin.com/in/philip-agee-47ab213/">P</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Ravi Mudumby"
-                           href="https://www.linkedin.com/in/ravi-mudumby-337b96b/">R</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Jenny Rice"
-                           href="https://www.linkedin.com/in/jenny-rice-7b43a35/">J</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Jeff Cowgill"
-                           href="https://www.linkedin.com/in/jeff-cowgill/">J</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Jason Wiedemann"
-                           href="https://www.linkedin.com/in/jwiedemann12/">J</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Amy Ciccarone"
-                           href="https://www.linkedin.com/in/amy-ciccarone-97861b13/">A</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Han Oh"
-                           href="https://www.linkedin.com/in/han-oh-85a349169/">H</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Charles Slyker"
-                           href="https://www.linkedin.com/in/charles-slyker-2a328920/">C</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Austin Wilson"
-                           href="https://www.linkedin.com/in/auswilson/">A</a>
-                        <a data-toggle="tooltip" data-placement="top" title="Ryan McCarty"
-                           href="https://www.linkedin.com/in/ryan-mccarty-b464b37a/">R</a>
-                        <a data-toggle="tooltip" data-placement="top" title="John Deeley"
-                           href="https://www.linkedin.com/in/john-deeley-3239a814/">J</a>
-                        <a data-toggle="tooltip" data-placement="top" title="David Coomes"
-                           href="https://www.linkedin.com/in/david-coomes-22318032/?locale=de_DE">D</a>
-                        <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Rich McKinless"
-                           href="https://www.linkedin.com/in/rich-mckinless-36174010/">H</a>
-                        <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Stephen Exley"
-                           href="https://www.linkedin.com/in/stephenexley/">S</a>
-                        <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="John Knost"
-                           href="https://www.linkedin.com/in/johnknost/">J</a>
-                        <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Paul Matteucci"
-                           href="https://www.linkedin.com/in/paul-matteucci-7025348/">P</a>
-                        <a class="widgets-mg-sn" data-toggle="tooltip" data-placement="top" title="Beth Leonard PMP"
-                           href="https://www.linkedin.com/in/beth-leonard/">B</a>
-                    </div>
                 </div>
-            </div>
-            <!--End Employee Profile-->
+                <!--End Employee Profile-->
 
             </div>
         </div>
