@@ -35,6 +35,10 @@ def start_dashboard():
 def start_algo():
     return render_template('algo.html')
 
+@app.route('/team')
+def start_team():
+    return render_template('team.html')
+
 
 #@app.route('/')
 #def trial():
