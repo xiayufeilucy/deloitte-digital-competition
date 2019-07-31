@@ -31,6 +31,10 @@ def search():
 def start_dashboard():
     return render_template('dashboard- summary.html')
 
+@app.route('/algo')
+def start_algo():
+    return render_template('algo.html')
+
 
 #@app.route('/')
 #def trial():
@@ -38,4 +42,4 @@ def start_dashboard():
 
 
 if __name__ == '__main__':
-    app.run()
+    app.run(port = 1234)
